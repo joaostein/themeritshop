@@ -10,9 +10,13 @@ html
       .container
         nav.menu-nav
          ul.main-menu
-          li: a href="#" About
-          li: a href="#" Shop
+          li
+            = link_to "About", root_path
+          li
+            = link_to "Shop", shop_path
           li: a href="#" FAQ
+          / = link_to "FAQ", faq_path
+
 
         ul.social-nav
           li: a.icon.facebook-icon href="#" Facebook
