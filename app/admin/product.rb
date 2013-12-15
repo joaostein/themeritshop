@@ -1,5 +1,5 @@
 ActiveAdmin.register Product do
-  permit_params :name, :description, :sold_out, :winner
+  permit_params :name, :description, :sold_out, :winner, :image
 
   show do |product|
     attributes_table do
@@ -9,6 +9,7 @@ ActiveAdmin.register Product do
       row :sold_out
       row :winner
       row :created_at
+      row :image
     end
 
     div :class => "panel" do
