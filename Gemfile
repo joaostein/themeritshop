@@ -6,6 +6,9 @@ gem 'simple_form'
 gem 'slim-rails'
 gem 'compass-rails', '~> 1.1.2'
 gem 'susy'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog', '~> 1.3.1'
 gem 'rails_12factor', group: :production
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
