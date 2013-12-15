@@ -2,9 +2,9 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
-gem "simple_form"
+gem 'simple_form'
 gem 'slim-rails'
-gem "compass-rails", "~> 2.0.alpha.0"
+gem 'compass-rails', '~> 1.1.2'
 gem 'susy'
 gem 'rails_12factor', group: :production
 
