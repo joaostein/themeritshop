@@ -1,5 +1,7 @@
 .product-image
-  img src="assets/tmp/product-tmp.jpg"
+  - if product.image?
+    = image_tag(product.image, width: 580, height: 420)
+
 .product-description-wrapper
   span.line
   h1.product-title = product.name
