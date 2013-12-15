@@ -17,3 +17,6 @@
 
 # DS_Store
 .DS_Store
+
+# uploaded images
+public/uploads
