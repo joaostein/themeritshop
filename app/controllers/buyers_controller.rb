@@ -1,6 +1,7 @@
 class BuyersController < ApplicationController
   def create
     product = Product.find params[:product_id]
+    product.sold_out = true
     buyer = Buyer.new(buyer_params)
     product.buyers << buyer
     product.save

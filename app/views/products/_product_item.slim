@@ -6,4 +6,7 @@
   span.line
   h1.product-title = product.name
   p.product-description = product.description
-  a.base-btn.alt-btn href="#" Upload payment
+  - if product.sold_out?
+    a.base-btn.alt-btn href="#" Sold out
+  - else
+    a.base-btn.alt-btn href="#" Upload payment
