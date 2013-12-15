@@ -1,4 +1,12 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
+
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem "simple_form"
+gem 'slim-rails'
+gem "compass-rails", "~> 2.0.alpha.0"
+gem 'susy'
+gem 'rails_12factor', group: :production
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
