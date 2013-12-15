@@ -1,0 +1,289 @@
+//-----------------------------------------------------------------------
+//
+//  Base » General
+//
+//  Contains all general style.
+//
+//-----------------------------------------------------------------------
+
++border-box-sizing
+
+.container
+  +container
+
+body
+  font-family: $font
+
+.icon
+  display: block
+  width: 25px
+  height: 25px
+  text-indent: -999em
+
+.facebook-icon
+  +small-elements-sprite("facebook-icon")
+  &:hover
+    +small-elements-sprite("facebook-icon-hover")
+
+.instagram-icon
+  +small-elements-sprite("instagram-icon")
+  &:hover
+    +small-elements-sprite("instagram-icon-hover")
+
+.youtube-icon
+  +small-elements-sprite("youtube-icon")
+  &:hover
+    +small-elements-sprite("youtube-icon-hover")
+
+.twitter-icon
+  +small-elements-sprite("twitter-icon")
+  &:hover
+    +small-elements-sprite("twitter-icon-hover")
+
+//-----------------------------------------------------------------------
+//
+//  Base » Header
+//
+//  Contains all header style.
+//
+//-----------------------------------------------------------------------
+
+.main-header
+  background: $dark-gray
+  padding: 30px 0
+
+.menu-nav
+  float: left
+
+.main-menu
+  margin: 0
+  padding: 0
+  li
+    +inline-block
+    list-style: none
+    margin-left: 45px
+    &:first-child
+      margin-left: 0
+    a
+      display: block
+      color: $gray
+      text-decoration: none
+      text-transform: uppercase
+      &:hover
+        color: $green
+
+.social-nav
+  float: right
+  margin: 0
+  padding: 0
+  li
+    +inline-block
+    margin-left: 25px
+    &:first-child
+      margin-left: 0
+
+//-----------------------------------------------------------------------
+//
+//  Base » Intro
+//
+//  Contains all intro section style.
+//
+//-----------------------------------------------------------------------
+
+.intro-wrapper
+  background: $green
+  padding: 130px 0 110px
+  text-align: center
+  p
+    +squish(2)
+    +span-columns(12, 16)
+    +adjust-font-size-to(18px)
+
+.logo
+  width: 125px
+  margin: 0 auto 160px
+
+.main-title
+  +inline-block
+  +adjust-font-size-to(24px)
+  line-height: 38px
+  text-transform: uppercase
+  border-top: 4px solid $dark-gray
+  border-bottom: 4px solid $dark-gray
+  margin-bottom: 40px
+
+//-----------------------------------------------------------------------
+//
+//  Base » Video Presentation
+//
+//  Contains all video presentation section style.
+//
+//-----------------------------------------------------------------------
+
+.video-presentation
+  padding: 175px 0 410px
+  background: $gray
+
+.video-wrapper
+  img
+    width: 100%
+    height: auto
+
+//-----------------------------------------------------------------------
+//
+//  Base » How it works
+//
+//  Contains all how it works section style.
+//
+//-----------------------------------------------------------------------
+
+.how-it-works-wrapper
+  background: $dark-gray
+
+.how-it-works
+  +span-columns(16, 16)
+  background: $green
+  margin-top: -205px
+  margin-bottom: 160px
+  padding: 50px 0 80px
+  text-align: center
+  h1
+    +adjust-font-size-to(22px)
+    text-transform: uppercase
+    margin: 0 0 70px
+  p
+    +adjust-font-size-to(14px)
+    line-height: 1.3em
+    padding: 0 1.1em
+
+.steps-wrapper
+  +span-columns(12, 16)
+  +squish(2, 16)
+
+.step
+  +span-columns(4, 13)
+  +post(1)
+  &:last-child
+    +omega
+  .icon
+    width: 84px
+    height: 84px
+    margin: 0 auto
+
+.browse .icon
+  +steps-sprite("browse")
+.record .icon
+  +steps-sprite("record")
+.upload .icon
+  +steps-sprite("upload")
+
+.call-to-action
+  +span-columns(16)
+  margin-bottom: 150px
+
+.base-btn
+  display: block
+  width: 155px
+  margin: 0 auto
+  text-transform: uppercase
+  text-decoration: none
+  background: $gray
+  color: darken($dark-gray, 20%)
+  padding: 13px 25px
+  &:hover
+    background: $green
+
+//-----------------------------------------------------------------------
+//
+//  Base » Footer
+//
+//  Contains all footer section style.
+//
+//-----------------------------------------------------------------------
+
+.footer-main
+  +adjust-font-size-to(16px)
+  background: darken($dark-gray, 2%)
+  float: left
+  width: 100%
+  color: $green
+  padding: 55px 0 55px
+  text-align: center
+
+.share
+  +span-columns(16)
+  ul
+    padding: 0
+    margin: 0
+  li
+    +inline-block
+    margin-left: 10px
+    &:first-child
+      margin-left: 0
+  p
+    margin-top: 0
+
+//-----------------------------------------------------------------------
+//
+//  Base » Products
+//
+//  Contains all product style.
+//
+//-----------------------------------------------------------------------
+
+.product-wrapper
+  +span-columns(16, 16)
+  padding: 90px 0
+
+.even
+  background: #fff
+  .product-image
+    +span-columns(10, 16)
+    +post(2)
+    background: $gray
+    height: 420px
+    overflow: hidden
+
+.product-description-wrapper
+  +span-columns(4, 16)
+
+.odd
+  background: $gray
+  .product-image
+    +span-columns(10, 16)
+    +omega
+
+
+
+.product-title
+  +adjust-font-size-to(30px)
+  line-height: 1.0em
+  text-transform: uppercase
+  margin: 0
+  margin-bottom: 25px
+
+.product-description
+  margin: 0
+  margin-bottom: 35px
+
+.alt-btn
+  width: 100%
+  background: $dark-gray
+  color: $gray
+  &:hover
+    color: #fff
+
+.line
+  width: 20px
+  height: 0
+  display: block
+  border-top: 2px solid $dark-gray
+  margin-bottom: 20px
+
+
+
+
+
+
+
+

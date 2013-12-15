@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    title The Merit Shop
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  body
+    header.main-header
+      .container
+        nav.menu-nav
+         ul.main-menu
+          li: a href="#" About
+          li: a href="#" Shop
+          li: a href="#" FAQ
+
+        ul.social-nav
+          li: a.icon.facebook-icon href="#" Facebook
+          li: a.icon.instagram-icon href="#" Instagram
+          li: a.icon.youtube-icon href="#" YouTube
+    = yield
+
+    footer.footer-main
+      .container
+        .share
+          p Tell your friends about the Merit Shop
+          ul
+            li: a.icon.facebook-icon href="#" Facebook
+            li: a.icon.twitter-icon href="#" Twitter
+
+    = javascript_include_tag "application", "data-turbolinks-track" => true

@@ -1,0 +1,27 @@
+- @products.each_with_index do |product, index|
+  - if index % 2 === 0
+    article.product-wrapper.even
+      .container
+        = render 'products/product_item', product: product
+  - else
+    article.product-wrapper.odd
+      .container
+        = render 'products/product_item', product: product
+
+
+
+/ h1 Products
+/ - @products.each do |product|
+/   h2 = product.name
+/   p = product.description
+
+/   h2 Buy now!
+/   = simple_form_for [product, product.buyers.build] do |f|
+/     = f.error_notification
+/     .form-inputs
+/       = f.input :name
+/       = f.input :email
+/       = f.input :instagram
+/       = f.input :url
+/     .form-actions
+/       = f.button :submit, class: 'btn btn-primary', value: 'Buy'
