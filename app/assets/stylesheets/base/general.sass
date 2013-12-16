@@ -294,11 +294,6 @@ body
   +span-columns(16, 16)
   padding: 90px 0
 
-.product-image
-  position: relative
-  img
-    display: block
-
 .sold-out-banner
   +adjust-font-size-to(30px)
   font-weight: 700
@@ -313,23 +308,25 @@ body
   line-height: 0.9em
   padding: 45px 0
 
-.even
-  background: #fff
-  .product-image
-    +span-columns(10, 16)
-    +post(2)
-    background: $gray
-    height: 420px
-    overflow: hidden
+.product-image
+  position: relative
+  display: block
+  overflow: hidden
+  img
+    width: 100%
+    height: auto
+    display: block
 
 .product-description-wrapper
-  +span-columns(4, 16)
+  text-align: center
+  display: block
+  width: 80%
+  margin: 50px 10% 0
+  .line
+    display: none
 
-.odd
-  background: $gray
-  .product-image
-    +span-columns(10, 16)
-    +omega
+.alt-btn
+  margin: 0 auto
 
 .product-title
   +adjust-font-size-to(30px)
@@ -347,7 +344,6 @@ body
 .alt-btn
   +adjust-font-size-to(14px)
   width: 190px
-  margin: 0
   padding: 10px
   line-height: 1em
   letter-spacing: 1px
@@ -365,6 +361,30 @@ body
   display: block
   border-top: 2px solid $dark-gray
   margin-bottom: 20px
+
+.even
+  background: #fff
+.odd
+  background: $gray
+
+@media (min-width: 768px)
+  .even
+    .product-image
+      +span-columns(10, 16)
+      +post(2)
+      background: $gray
+  .odd
+    .product-image
+      +span-columns(10, 16)
+      +omega
+  .product-description-wrapper
+    text-align: left
+    +span-columns(4, 16)
+    margin: 0
+    .line
+      display: block
+  .alt-btn
+    margin: 0
 
 //-----------------------------------------------------------------------
 //
