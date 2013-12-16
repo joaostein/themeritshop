@@ -159,15 +159,11 @@ body
     width: 100%
     height: auto
 
-
-
 @media (min-width: 768px)
   .video-presentation
     padding: 175px 0 404px
   .video-wrapper
     padding: 0
-
-
 
 //-----------------------------------------------------------------------
 //
@@ -184,14 +180,14 @@ body
   +span-columns(16, 16)
   background: $green
   margin-top: -205px
-  margin-bottom: 160px
-  padding: 54px 0 80px
+  margin-bottom: 100px
+  padding: 54px 0 50px
   text-align: center
   h1
     +adjust-font-size-to(22px)
     word-spacing: 1px
     text-transform: uppercase
-    margin: 0 0 63px
+    margin: 0 0 30px
     word-spacing: 1px
     letter-spacing: 1.2px
   a
@@ -207,10 +203,8 @@ body
   +squish(2, 16)
 
 .step
-  +span-columns(4, 13)
-  +post(1)
-  &:last-child
-    +omega
+  display: block
+  margin-bottom: 50px
   .icon
     width: 84px
     height: 84px
@@ -225,7 +219,7 @@ body
 
 .call-to-action
   +span-columns(16)
-  margin-bottom: 150px
+  margin-bottom: 100px
 
 .base-btn
   +adjust-font-size-to(22px)
@@ -241,6 +235,21 @@ body
   padding: 13px
   &:hover
     background: $green
+
+@media (min-width: 768px)
+  .step
+    +span-columns(4, 13)
+    +post(1)
+    margin-bottom: 0
+    &:last-child
+      +omega
+  .how-it-works
+    margin-bottom: 160px
+    padding-bottom: 80px
+    h1
+      margin-bottom: 63px
+  .call-to-action
+    margin-bottom: 150px
 
 //-----------------------------------------------------------------------
 //
