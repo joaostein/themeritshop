@@ -133,6 +133,7 @@ body
 @media (min-width: 768px)
   .main-title
     +adjust-font-size-to(24px)
+    line-height: 36px
   .intro-wrapper
     padding: 130px 0 106px
     p
@@ -140,6 +141,7 @@ body
       +adjust-font-size-to(18px)
       margin: 0 auto
       margin-bottom: 14px
+      padding: 0
 
 //-----------------------------------------------------------------------
 //
@@ -454,18 +456,20 @@ body
     background: $green
     height: 100%
     .line
+      margin-left: 0
       margin-top: 90px
       margin-bottom: 63px
   .product
     +span-columns(7, 16)
     +post(3, 16)
-    margin-right: 0
+    margin: 0
   .about
     +span-columns(6, 16)
     +omega
   .question
     h1
       +adjust-font-size-to(25px)
+      line-height: 1em
   .who-created
     margin-top: 99px
 
