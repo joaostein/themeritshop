@@ -54,7 +54,8 @@ body
   padding: 25px 0
 
 .menu-nav
-  float: left
+  width: 290px
+  margin: 0 auto
 
 .main-menu
   margin: 0
@@ -83,11 +84,18 @@ body
   float: right
   margin: 0
   padding: 0
+  display: none
   li
     +inline-block
     margin-left: 22px
     &:first-child
       margin-left: 0
+
+@media (min-width: 768px)
+  .social-nav
+    display: block
+  .menu-nav
+    float: left
 
 //-----------------------------------------------------------------------
 //
