@@ -6,24 +6,27 @@ html
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
     = csrf_meta_tags
   body
-    header.main-header
-      .container
-        nav.menu-nav
-         ul.main-menu
-          li
-            = link_to "About", root_path
-          li
-            = link_to "Shop", shop_path
-          li
-            = link_to "FAQ", faq_path
+    #root class="#{@page}"
+      header.main-header
+        .container
+          nav.menu-nav
+           ul.main-menu
+            li
+              = link_to "About", root_path
+            li
+              = link_to "Shop", shop_path
+            li
+              = link_to "FAQ", faq_path
 
-        ul.social-nav
-          li: a.icon.facebook-icon href="#" Facebook
-          li: a.icon.instagram-icon href="#" Instagram
-          li: a.icon.youtube-icon href="#" YouTube
-    = yield
+          ul.social-nav
+            li: a.icon.facebook-icon href="#" Facebook
+            li: a.icon.instagram-icon href="#" Instagram
+            li: a.icon.youtube-icon href="#" YouTube
+      = yield
 
-    footer.footer-main
+      #root_footer
+
+    footer#footer.footer-main
       .container
         .share
           p Tell your friends about the Merit Shop
