@@ -1,12 +1,14 @@
 .product-image
   - if product.image?
     = image_tag(product.image, width: 580, height: 420)
+  - if product.sold_out?
+    span.sold-out-banner Sold Out
 
 .product-description-wrapper
   span.line
   h1.product-title = product.name
   p.product-description = product.description
   - if product.sold_out?
-    a.base-btn.alt-btn href="#" Sold out
+    a.base-btn.alt-btn.green href="#{if product.buyers.first then product.buyers.first.url end}" target="_blank" See what paid it
   - else
     a.base-btn.alt-btn.buy-trigger data-url="products/#{product.id}/buyers" data-reveal-id="modal" data-animation="fade" href="#" Upload payment
