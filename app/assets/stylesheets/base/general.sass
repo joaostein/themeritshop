@@ -110,9 +110,9 @@ body
   padding: 130px 0 106px
   text-align: center
   p
-    width: 640px
-    +adjust-font-size-to(18px)
-    margin: 0 auto
+    +adjust-font-size-to(14px)
+    width: 100%
+    padding: 0 10%
 
 .logo
   width: 241px
@@ -120,7 +120,7 @@ body
 
 .main-title
   +inline-block
-  +adjust-font-size-to(24px)
+  +adjust-font-size-to(16px)
   line-height: 36px
   text-transform: uppercase
   border-top: 4px solid $dark-gray
@@ -128,6 +128,17 @@ body
   margin-bottom: 40px
   margin-top: 0
   letter-spacing: 1.4px
+
+@media (min-width: 768px)
+  .main-title
+    +adjust-font-size-to(24px)
+  .intro-wrapper
+    p
+      width: 640px
+      +adjust-font-size-to(18px)
+      margin: 0 auto
+
+
 
 //-----------------------------------------------------------------------
 //
