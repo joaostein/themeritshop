@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   def index
+    @page = 'shop-page'
     @products = Product.all
   end
 

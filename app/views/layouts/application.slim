@@ -12,11 +12,11 @@ html
           nav.menu-nav
            ul.main-menu
             li
-              = link_to "About", root_path
+              = link_to "About", root_path, class: "about-active"
             li
-              = link_to "Shop", shop_path
+              = link_to "Shop", shop_path, class: "shop-active"
             li
-              = link_to "FAQ", faq_path
+              = link_to "FAQ", faq_path, class: "faq-active"
 
           ul.social-nav
             li: a.icon.facebook-icon href="#" Facebook
