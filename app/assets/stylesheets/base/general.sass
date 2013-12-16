@@ -400,6 +400,7 @@ body
   .line
     margin-top: 90px
     margin-bottom: 63px
+    margin-left: 10%
 
 .faq-wrapper
   padding-bottom: 125px
@@ -410,7 +411,7 @@ body
   &:first-child
     margin-top: 0
   h1
-    +adjust-font-size-to(25px)
+    +adjust-font-size-to(22px)
     line-height: 1em
     text-transform: uppercase
     margin: 0
@@ -427,16 +428,13 @@ body
     line-height: 1.3em
     display: block
 
-.who-created
-  margin-top: 99px
-
 .product
-  +span-columns(7, 16)
-  +post(3, 16)
+  width: 80%
+  margin: 0 10% 75px
 
 .about
-  +span-columns(6, 16)
-  +omega
+  width: 80%
+  margin: 0 10%
 
 .contact
   font-style: normal
@@ -450,6 +448,26 @@ body
     line-height: 1em
   strong
     font-weight: 700
+
+@media (min-width: 768px)
+  .faq-page
+    background: $green
+    height: 100%
+    .line
+      margin-top: 90px
+      margin-bottom: 63px
+  .product
+    +span-columns(7, 16)
+    +post(3, 16)
+    margin-right: 0
+  .about
+    +span-columns(6, 16)
+    +omega
+  .question
+    h1
+      +adjust-font-size-to(25px)
+  .who-created
+    margin-top: 99px
 
 
 
