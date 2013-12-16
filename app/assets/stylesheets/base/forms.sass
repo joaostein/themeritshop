@@ -2,10 +2,7 @@
   background: $green
 
 .reveal-modal
-  left: 50%
-  margin-left: -430px
-  width: 860px
-  padding: 125px 100px 45px
+  padding: 100px 10% 45px
 
 .reveal-modal .close-reveal-modal
   +adjust-font-size-to(32px)
@@ -22,18 +19,15 @@
   margin-bottom: 15px
 
 .buy-product
-  margin-bottom: 75px
-  label
-    +inline-block
-    width: 15%
-  input
+  margin-bottom: 35px
 
 .user-input
-  +inline-block
+  display: block
   background: $dark-gray
   border: 0
   outline-color: transparent
-  width: 85%
+  width: 100%
+  margin-top: 5px
   color: $gray
   padding: 10px
   height: 35px
@@ -42,7 +36,6 @@
 
 .buy-btn
   display: block
-  margin-left: 15%
   width: 95px
   background: $dark-gray
   border: 0
@@ -55,7 +48,33 @@
     color: $dark-gray
 
 .hint
-  margin-left: 15%
   font-weight: 400
+  +adjust-font-size-to(12px)
+  line-height: 1em
+
+@media (min-width: 768px)
+  .reveal-modal
+    left: 50%
+    margin-left: -430px
+    width: 860px
+    padding: 125px 100px 45px
+  .user-input
+    +inline-block
+    margin-top: 0
+  .buy-product
+    margin-bottom: 75px
+    label
+      +inline-block
+      width: 15%
+  .user-input
+    width: 85%
+  .buy-btn
+    margin-left: 15%
+  .buy-product
+    margin-bottom: 75px
+  .hint
+    +adjust-font-size-to(13px)
+    margin-left: 15%
+
 
 
