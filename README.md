@@ -9,10 +9,10 @@ Visit the website: [themeritshop.org](http://www.themeritshop.org)
 
 **Creation and design:**
 - [Daniel Soares](http://www.danielsoares.me)
-- [Pedro Sampaio](http://www.pxs.m)
+- [Pedro Sampaio](http://www.pxs.me)
 
 **Developer:**
-- [Joao Stein](htttp://www.joaostein.com.br)
+- [Joao Stein](http://www.joaostein.com.br)
 
 **Writer:**
 - [Paul Bootlis](http://www.krop.com/paulbootlis/)
