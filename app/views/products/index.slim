@@ -16,7 +16,7 @@
     input.buy-btn type="submit" name="commit" value="Submit"
   small.hint * Upload a video, photo or whatever. Hosted on Youtube, Instagram, or wherever.
 
-- @products.each_with_index do |product, index|
+- @products.order('created_at ASC').all.each_with_index do |product, index|
   - if index % 2 === 0
     article.product-wrapper.even
       .container
