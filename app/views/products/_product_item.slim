@@ -9,13 +9,4 @@
   - if product.sold_out?
     a.base-btn.alt-btn href="#" Sold out
   - else
-    a.base-btn.alt-btn href="#" Upload payment
-    = simple_form_for [product, product.buyers.build] do |f|
-      = f.error_notification
-      .form-inputs
-        = f.input :name
-        = f.input :email
-        = f.input :instagram
-        = f.input :url
-      .form-actions
-        = f.button :submit, class: 'btn btn-primary', value: 'Buy'
+    a.base-btn.alt-btn.buy-trigger data-url="products/#{product.id}/buyers" data-reveal-id="myModal" href="#" Upload payment

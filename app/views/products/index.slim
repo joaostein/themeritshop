@@ -1,3 +1,19 @@
+#modal
+  form accept-charset="UTF-8" method="post" action="javascript: return false;"
+    div style="margin:0;padding:0;display:inline"
+      input type="hidden" name="utf8" value="✓"
+      input type="hidden" name="authenticity_token" value="#{ form_authenticity_token }"
+    label
+      | Name
+      input type="text" name="buyer[name]" required="required"
+    label
+      | Email
+      input type="email" name="buyer[email]" required="required"
+    label
+      | Link
+      input type="url" name="buyer[url]" required="required"
+    input type="submit" name="commit" value="Buy"
+
 - @products.each_with_index do |product, index|
   - if index % 2 === 0
     article.product-wrapper.even
@@ -8,21 +24,3 @@
     article.product-wrapper.odd
       .container
         = render 'products/product_item', product: product
-
-
-
-/ h1 Products
-/ - @products.each do |product|
-/   h2 = product.name
-/   p = product.description
-
-/   h2 Buy now!
-/   = simple_form_for [product, product.buyers.build] do |f|
-/     = f.error_notification
-/     .form-inputs
-/       = f.input :name
-/       = f.input :email
-/       = f.input :instagram
-/       = f.input :url
-/     .form-actions
-/       = f.button :submit, class: 'btn btn-primary', value: 'Buy'

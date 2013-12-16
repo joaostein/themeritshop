@@ -12,6 +12,6 @@ class BuyersController < ApplicationController
 
   private
     def buyer_params
-      params.require(:buyer).permit(:name, :email, :instagram, :url, :product_id)
+      params.require(:buyer).permit(:name, :email, :url, :product_id)
     end
 end
