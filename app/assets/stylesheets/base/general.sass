@@ -314,12 +314,32 @@ body
 .faq
   background: $green
   height: 100%
+  .line
+    margin-top: 90px
+    margin-bottom: 60px
+
+.faq-wrapper
+  padding-bottom: 125px
 
 .question
+  +adjust-font-size-to(14px)
+  margin-top: 75px
+  &:first-child
+    margin-top: 0
   h1
+    +adjust-font-size-to(22px)
+    line-height: 1em
+    text-transform: uppercase
     margin: 0
+    margin-bottom: 20px
+    font-weight: 700
   p
     margin: 0
+  a
+    color: $dark-gray
+
+.who-created
+  margin-top: 99px
 
 .product
   +span-columns(7, 16)
@@ -328,6 +348,16 @@ body
 .about
   +span-columns(6, 16)
   +omega
+
+.role
+  margin-top: 25px
+  &:first-child
+    margin-top: 0
+  span
+    display: block
+    line-height: 1.4em
+  em
+    font-weight: 700
 
 
 
