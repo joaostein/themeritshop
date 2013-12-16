@@ -7,7 +7,7 @@ class BuyersController < ApplicationController
     product.save
 
     flash[:notice] = 'Order saved'
-    redirect_to products_path()
+    redirect_to '/shop'
   end
 
   private
