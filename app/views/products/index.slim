@@ -1,18 +1,20 @@
-#modal
-  form accept-charset="UTF-8" method="post" action="javascript: return false;"
+#modal.reveal-modal
+  a.close-reveal-modal &#215;
+  form.buy-product accept-charset="UTF-8" method="post" action="javascript: return false;"
     div style="margin:0;padding:0;display:inline"
       input type="hidden" name="utf8" value="✓"
       input type="hidden" name="authenticity_token" value="#{ form_authenticity_token }"
-    label
-      | Name
-      input type="text" name="buyer[name]" required="required"
-    label
-      | Email
-      input type="email" name="buyer[email]" required="required"
-    label
-      | Link
-      input type="url" name="buyer[url]" required="required"
-    input type="submit" name="commit" value="Buy"
+    .form-field
+      label for="buyer_name" Name
+      input#buyer_name.user-input type="text" name="buyer[name]" required="required"
+    .form-field
+      label for="buyer_email" Email
+      input#buyer_email.user-input type="email" name="buyer[email]" required="required"
+    .form-field
+      label for="buyer_url" Link*
+      input#buyer_url.user-input type="url" name="buyer[url]" required="required"
+    input.buy-btn type="submit" name="commit" value="Submit"
+  small.hint * Upload a video, photo or whatever. Hosted on Youtube, Instagram, or wherever.
 
 - @products.each_with_index do |product, index|
   - if index % 2 === 0

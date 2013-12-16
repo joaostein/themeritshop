@@ -1,0 +1,62 @@
+#modal
+  background: $green
+
+.reveal-modal
+  left: 50%
+  margin-left: -430px
+  width: 860px
+  padding: 125px 100px 45px
+
+.reveal-modal .close-reveal-modal
+  +adjust-font-size-to(32px)
+  line-height: .6
+  position: absolute
+  top: 30px
+  right: 30px
+  color: $dark-gray
+  cursor: pointer
+  &:hover
+    color: $gray
+
+.form-field
+  margin-bottom: 15px
+
+.buy-product
+  margin-bottom: 75px
+  label
+    +inline-block
+    width: 15%
+  input
+
+.user-input
+  +inline-block
+  background: $dark-gray
+  border: 0
+  outline-color: transparent
+  width: 85%
+  color: $gray
+  padding: 10px
+  height: 35px
+  &[type=submit]
+    margin-left: 15%
+
+.buy-btn
+  display: block
+  margin-left: 15%
+  width: 95px
+  background: $dark-gray
+  border: 0
+  color: $gray
+  height: 35px
+  text-transform: uppercase
+  outline-color: transparent
+  &:hover
+    background: $gray
+    color: $dark-gray
+
+.hint
+  margin-left: 15%
+  font-weight: 400
+
+
+
