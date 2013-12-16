@@ -3,6 +3,8 @@
 This is a non-profit organization that try to question the real value of money.
 The main idea is a place where you can sing a song, tell a joke or do whatever. Use creativity to purchase products. You can basically pay with your talents instead of money.
 
+Visit the website: [themeritshop.org](http://www.themeritshop.org)
+
 ## Authors:
 
 **Creation and design:**
