@@ -107,12 +107,13 @@ body
 
 .intro-wrapper
   background: $green
-  padding: 130px 0 106px
+  padding: 100px 0 106px
   text-align: center
   p
     +adjust-font-size-to(14px)
     width: 100%
     padding: 0 10%
+    margin-bottom: 0
 
 .logo
   width: 241px
@@ -133,12 +134,12 @@ body
   .main-title
     +adjust-font-size-to(24px)
   .intro-wrapper
+    padding: 130px 0 106px
     p
       width: 640px
       +adjust-font-size-to(18px)
       margin: 0 auto
-
-
+      margin-bottom: 14px
 
 //-----------------------------------------------------------------------
 //
@@ -149,13 +150,24 @@ body
 //-----------------------------------------------------------------------
 
 .video-presentation
-  padding: 175px 0 404px
+  padding: 100px 0 304px
   background: $gray
 
 .video-wrapper
+  padding: 0 10%
   img
     width: 100%
     height: auto
+
+
+
+@media (min-width: 768px)
+  .video-presentation
+    padding: 175px 0 404px
+  .video-wrapper
+    padding: 0
+
+
 
 //-----------------------------------------------------------------------
 //
