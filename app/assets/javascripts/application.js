@@ -15,3 +15,4 @@
 //= require turbolinks
 //= require_tree .
 //= require jquery.reveal
+//= require analytics
