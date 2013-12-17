@@ -2,7 +2,11 @@ doctype html
 html
   head
     meta name="viewport" content="width=device-width, initial-scale=1.0"
+    meta property="og:title" content="The Merit Shop"
+    meta property="og:image" content=""
+    meta property="og:site_name" content="The Merit Shop"
     meta property="og:description" content="Buy something awesome...by being awesome. Visit the Merit Shop today."
+
     title The Merit Shop
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
     = csrf_meta_tags
@@ -33,8 +37,8 @@ html
           p Tell your friends about the Merit Shop
           ul
             li.facebook-share
-              .fb-share-button data-type="button" data-href="http://www.themeritshop.org"
+              a.icon.facebook-icon title="The Merit Shop" href="http://www.facebook.com/sharer.php? u=http://www.themeritshop.org &t=The Merit Shop" target="_blank" Facebook
             li.twitter-share
-              a.twitter-share-button href="https://twitter.com/share" data-count="none" data-lang="en" data-text="Buy something awesome...by being awesome. Visit the Merit Shop today. http://www.themeritshop.org"
+              a.icon.twitter-icon href="http://twitter.com/share?text=Buy something awesome...by being awesome. Visit the Merit Shop today. http://www.themeritshop.org" target="_blank" Twitter
 
     = javascript_include_tag "application", "data-turbolinks-track" => true
