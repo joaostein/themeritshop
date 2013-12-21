@@ -27,8 +27,10 @@ ActiveAdmin.register_page "Dashboard" do
         panel "All buyers" do
           ul do
             Buyer.all.map do |buyer|
-              unless buyer.product_id.nil?
+              if Product.exists?(buyer.product_id)
                 li link_to(buyer.name, admin_buyer_path(buyer)) + ' ' + (Product.find(buyer.product_id).name)
+              else
+                li link_to(buyer.name, admin_buyer_path(buyer)) + ' Error finding product'
               end
             end
           end
