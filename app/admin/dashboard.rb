@@ -27,8 +27,9 @@ ActiveAdmin.register_page "Dashboard" do
         panel "All buyers" do
           ul do
             Buyer.all.map do |buyer|
-              if Product.find(buyer.product_id)?
+              unless buyer.product_id.nil?
                 li link_to(buyer.name, admin_buyer_path(buyer)) + ' ' + (Product.find(buyer.product_id).name)
+              end
             end
           end
         end
