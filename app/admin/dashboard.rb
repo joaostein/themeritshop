@@ -17,7 +17,7 @@ ActiveAdmin.register_page "Dashboard" do
         panel "All Products" do
           ul do
             Product.all.map do |product|
-              # li link_to(product.name, admin_product_path(product))
+              li link_to(product.name, admin_product_path(product))
             end
           end
         end
@@ -27,7 +27,7 @@ ActiveAdmin.register_page "Dashboard" do
         panel "All buyers" do
           ul do
             Buyer.all.map do |buyer|
-              # li link_to(buyer.name, admin_buyer_path(buyer)) + ' ' + (Product.find(buyer.product_id).name)
+              li link_to(buyer.name, admin_buyer_path(buyer)) + ' ' + (Product.find(buyer.product_id).name)
             end
           end
         end
