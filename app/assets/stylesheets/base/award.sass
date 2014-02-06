@@ -1,0 +1,68 @@
+//-----------------------------------------------------------------------
+//
+//  Base » Award
+//
+//  Contains all award page style.
+//
+//-----------------------------------------------------------------------
+
+.award-page
+  .main-header
+    background: $green
+    text-align: center
+
+  .video-intro
+    height: 750px
+    background: url("/assets/award/video-placeholder-image.jpg") center top no-repeat
+    background-size: cover
+    padding-top: 1px // used to prevent margin collapse
+    position: relative
+
+  .video-content-wrapper
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 360px
+    margin-left: -180px
+    text-align: center
+    h1
+      +adjust-font-size-to(20px)
+      line-height: 1.2em
+      color: #fff
+      text-transform: uppercase
+      margin-top: 55px
+      margin-bottom: 0
+
+  .play-button
+    +transition-property(background)
+    +transition-duration(1s)
+    +border-radius(100%)
+    display: block
+    width: 85px
+    height: 85px
+    background: rgba(255, 255, 255, .5)
+    cursor: pointer
+    margin: 0 auto
+    &:hover
+      background: rgba(255, 255, 255, .9)
+
+  .line
+    display: block
+    width: 30px
+    height: 4px
+    background: #fff
+    margin: 20px auto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
