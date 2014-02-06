@@ -53,7 +53,31 @@
     background: #fff
     margin: 20px auto
 
+  .description
+    background: #eaeaea
+    padding: 80px 0
 
+  .description-block-wrapper
+    +span-columns(16)
+
+  .description-block
+    float: left
+    width: 33.33333333%
+    border-left: 3px solid $green
+    padding-left: 55px
+    padding-right: 55px
+    min-height: 160px
+    &:first-child
+      border-left: 0
+    h2
+      +adjust-font-size-to(22px)
+      color: $green
+      text-transform: uppercase
+      line-height: 1em
+      margin-top: 0
+    p
+      +adjust-font-size-to(12px)
+      line-height: 1.2em
 
 
 
