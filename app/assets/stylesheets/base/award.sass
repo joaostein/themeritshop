@@ -301,13 +301,6 @@
       margin: 0
   .quote
     position: relative
-    margin-top: 270px
-    &:first-child
-      margin-top: 0
-  .quote.mashable-logo
-    margin-top: 200px
-  .quote.nasdaq-logo
-    margin-top: 250px
   blockquote
     position: absolute
     margin: 0
@@ -315,6 +308,7 @@
     text-indent: -9999em
 
 .abc-news-logo
+  margin-top: 30px
   h2
     +companies-sprite("abc-logo")
     height: companies-sprite-height("abc-logo")
@@ -323,10 +317,11 @@
     +quotes-sprite("abc")
     height: quotes-sprite-height("abc")
     width: quotes-sprite-width("abc")
-    top: -60px
-    left: -215px
+    top: -57px
+    left: -223px
 
 .fast-company-logo
+  margin-top: 239px
   h2
     +companies-sprite("fast-company-logo")
     height: companies-sprite-height("fast-company-logo")
@@ -336,9 +331,11 @@
     height: quotes-sprite-height("fast-company")
     width: quotes-sprite-width("fast-company")
     top: -70px
-    left: -215px
+    left: -219px
 
 .mashable-logo
+  margin-top: 186px
+  margin-left: 20px
   h2
     +companies-sprite("mashable-logo")
     height: companies-sprite-height("mashable-logo")
@@ -347,9 +344,11 @@
     +quotes-sprite("mashable")
     height: quotes-sprite-height("mashable")
     width: quotes-sprite-width("mashable")
-    right: -190px
+    right: -202px
 
 .nasdaq-logo
+  margin-top: 245px
+  margin-left: 7px
   h2
     +companies-sprite("nasdaq-logo")
     height: companies-sprite-height("nasdaq-logo")
@@ -358,7 +357,8 @@
     +quotes-sprite("nasdaq")
     height: quotes-sprite-height("nasdaq")
     width: quotes-sprite-width("nasdaq")
-    right: -215px
+    right: -214px
+    top: -87px
 
 .video-examples
   float: left
