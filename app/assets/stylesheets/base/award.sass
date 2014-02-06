@@ -87,7 +87,7 @@
     +squish(1)
 
 .impact-tree
-  background: lighten($green, 9%) url("/assets/award/result-tree.png") top center no-repeat
+  background: #a1f1da url("/assets/award/result-tree.png") top center no-repeat
   position: relative
   width: 724px
   height: 940px
@@ -106,24 +106,28 @@
     text-indent: -9999em
     position: absolute
     margin: 0
+
   .fast-company
     +companies-sprite("fast-company")
     height: companies-sprite-height("fast-company")
     width: companies-sprite-width("fast-company")
     top: 174px
     left: -23px
+
   .good
     +companies-sprite("good")
     height: companies-sprite-height("good")
     width: companies-sprite-width("good")
     top: 317px
     left: 104px
+
   .aol
     +companies-sprite("aol")
     height: companies-sprite-height("aol")
     width: companies-sprite-width("aol")
     top: 258px
     left: 190px
+
   .ard
     +companies-sprite("ard")
     height: companies-sprite-height("ard")
@@ -278,6 +282,93 @@
     top: 795px
     right: 174px
 
+.notable-results
+  +pie-clearfix()
+  background: #a1f1da
+  width: 724px
+  margin: 0 auto
+  padding-top: 70px
+  .col
+    float: left
+    width: 25%
+    height: 100%
+    padding: 25px
+    h2
+      text-indent: -9999em
+      margin: 0
+  .quote
+    position: relative
+    margin-top: 270px
+    &:first-child
+      margin-top: 0
+  .quote.mashable-logo
+    margin-top: 200px
+  .quote.nasdaq-logo
+    margin-top: 250px
+  blockquote
+    position: absolute
+    margin: 0
+    top: -80px
+    text-indent: -9999em
+
+.abc-news-logo
+  h2
+    +companies-sprite("abc-logo")
+    height: companies-sprite-height("abc-logo")
+    width: companies-sprite-width("abc-logo")
+  blockquote
+    +quotes-sprite("abc")
+    height: quotes-sprite-height("abc")
+    width: quotes-sprite-width("abc")
+    top: -60px
+    left: -215px
+
+.fast-company-logo
+  h2
+    +companies-sprite("fast-company-logo")
+    height: companies-sprite-height("fast-company-logo")
+    width: companies-sprite-width("fast-company-logo")
+  blockquote
+    +quotes-sprite("fast-company")
+    height: quotes-sprite-height("fast-company")
+    width: quotes-sprite-width("fast-company")
+    top: -70px
+    left: -215px
+
+.mashable-logo
+  h2
+    +companies-sprite("mashable-logo")
+    height: companies-sprite-height("mashable-logo")
+    width: companies-sprite-width("mashable-logo")
+  blockquote
+    +quotes-sprite("mashable")
+    height: quotes-sprite-height("mashable")
+    width: quotes-sprite-width("mashable")
+    right: -190px
+
+.nasdaq-logo
+  h2
+    +companies-sprite("nasdaq-logo")
+    height: companies-sprite-height("nasdaq-logo")
+    width: companies-sprite-width("nasdaq-logo")
+  blockquote
+    +quotes-sprite("nasdaq")
+    height: quotes-sprite-height("nasdaq")
+    width: quotes-sprite-width("nasdaq")
+    right: -215px
+
+.video-examples
+  float: left
+  width: 50%
+  text-align: center
+  h2
+    +adjust-font-size-to(16px)
+    color: darken(#91edd2, 10%)
+    text-transform: uppercase
+    margin: 0 0 5px
+  a
+    margin-bottom: 10px
+    +inline-block
 
 
 
