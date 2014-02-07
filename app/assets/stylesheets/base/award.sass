@@ -13,10 +13,12 @@
 
   .video-intro
     min-height: 750px
-    background: url("/assets/award/video-placeholder-image.jpg") center top no-repeat
     background-size: cover
-    padding-top: 1px // used to prevent margin collapse
     position: relative
+    .cover
+      position: absolute
+      height: 100%
+      z-index: 2
 
   .video-content-wrapper
     position: absolute
@@ -25,6 +27,7 @@
     width: 360px
     margin-left: -180px
     text-align: center
+    z-index: 2
     h1
       +adjust-font-size-to(20px)
       line-height: 1.2em
@@ -35,7 +38,6 @@
 
   .video-wrapper
     padding: 0
-    display: none
 
   .play-button
     +transition-property(background)
@@ -89,9 +91,6 @@
   .results
     background: #78ebca
 
-  .content-wrapper
-    +span-columns(14)
-    +squish(1)
 
 .impact-tree
   background: #a1f1da url("/assets/award/result-tree.png") top center no-repeat
@@ -406,16 +405,26 @@
 .bottom
   width: 100%
   height: 1146px
-  background: #78ebca url(/assets/award/bottom.jpg) center top no-repeat
+  background: #78ebca
   position: relative
+  padding-top: 4px
+  .ipad
+    width: 100%
+    position: absolute
+    left: -150px
+    top: -30px
 
+.bottom-wrapper
+  height: 400px
+  background: #a1f1da
+  width: 724px
+  margin: 0 auto
+  padding-top: 150px
 
-
-
-
-
-
-
-
-
-
+.visit-website
+  display: block
+  width: 100px
+  height: 100px
+  background: red
+  position: absolute
+  right: 0
