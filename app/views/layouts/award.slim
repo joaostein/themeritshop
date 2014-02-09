@@ -9,9 +9,11 @@ html
 
     title The Merit Shop
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = stylesheet_link_tag "//vjs.zencdn.net/4.2/video-js.css", media: "all", "data-turbolinks-track" => true
     = csrf_meta_tags
   body class="#{@page}"
     = yield
 
+    = javascript_include_tag "//vjs.zencdn.net/4.2/video.js", "data-turbolinks-track" => true
     = javascript_include_tag "awardVideo", "data-turbolinks-track" => true
 

@@ -7,54 +7,11 @@
 //-----------------------------------------------------------------------
 
 .award-page
-  body
-    background: #78ebca
+  background: #78ebca
+  min-width: 960px
   .main-header
     background: $green
     text-align: center
-
-  .video-intro
-    min-height: 750px
-    background-size: cover
-    position: relative
-    .cover
-      position: absolute
-      height: 100%
-      z-index: 2
-
-  .video-content-wrapper
-    position: absolute
-    top: 50%
-    left: 50%
-    width: 360px
-    margin-left: -180px
-    margin-top: -116px
-    text-align: center
-    z-index: 2
-    h1
-      +adjust-font-size-to(20px)
-      line-height: 1.2em
-      letter-spacing: 1px
-      color: #fff
-      text-transform: uppercase
-      margin-top: 55px
-      margin-bottom: 0
-
-  .video-wrapper
-    padding: 0
-
-  .play-button
-    +transition-property(background)
-    +transition-duration(1s)
-    +border-radius(100%)
-    display: block
-    width: 85px
-    height: 85px
-    background: rgba(255, 255, 255, .5)
-    cursor: pointer
-    margin: 0 auto
-    &:hover
-      background: rgba(255, 255, 255, .9)
 
   .line
     display: block
@@ -447,6 +404,89 @@
   background: url("/assets/award/visit-website.png") no-repeat
   &:hover
     background: url("/assets/award/visit-website-hover.png") no-repeat
+
+//-----------------------------------------------------------------------
+//
+//  Base » Award
+//
+//  Contains all Video style.
+//
+//-----------------------------------------------------------------------
+
+.award-page
+  .video-intro
+    width: 100%
+    .cover
+      height: 100%
+      display: block
+
+  .video-container
+    position: relative
+
+  .video-content-wrapper
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    overflow: hidden
+    .video-call-to-action
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 360px
+      margin-left: -180px
+      margin-top: -116px
+      text-align: center
+      z-index: 10
+    h1
+      +adjust-font-size-to(20px)
+      line-height: 1.2em
+      letter-spacing: 1px
+      color: #fff
+      text-transform: uppercase
+      margin-top: 55px
+      margin-bottom: 0
+
+  .video-wrapper
+    padding: 0
+
+  video
+    display: block
+    width: 100%
+
+  .video-js
+    .vjs-tech
+      position: static
+
+  .vjs-big-play-button
+    display: none !important
+
+  .play-button
+    +transition-property(background)
+    +transition-duration(1s)
+    +border-radius(100%)
+    display: block
+    width: 85px
+    height: 85px
+    background: rgba(255, 255, 255, .5)
+    cursor: pointer
+    margin: 0 auto
+    &:hover
+      background: rgba(255, 255, 255, .9)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

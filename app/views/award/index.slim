@@ -3,16 +3,20 @@ header.main-header
     img src="assets/logo.png" width="131" height="92"
 
 section.video-intro
-  img.cover src="/assets/award/video-placeholder-image.jpg"
-  .video-wrapper
-    .iframe-wrapper
-      #youtubeApiPlayer You need Flash player 8+ and JavaScript enabled to view this video.
+  .video-container
+    video#award-video.video-js.vjs-default-skin[controls preload="auto" width="auto" height="auto"]
+      source src="https://themeritshop.s3.amazonaws.com/award/video.mp4" type="video/mp4"
+      source src="https://themeritshop.s3.amazonaws.com/award/videohd.webm" type="video/webm"
+      source src="https://themeritshop.s3.amazonaws.com/award/video.ogv" type="video/ogg"
 
-  .video-content-wrapper
-    span.play-button
-      img src="assets/award/play-button.png" width="85" height="85"
-    h1 What if money didn't exist, and all we had was talent?
-    span.line
+    .video-content-wrapper
+      img.cover src="/assets/award/video-placeholder-image.jpg"
+      .video-call-to-action
+        span.play-button
+          img src="assets/award/play-button.png" width="85" height="85"
+        h1 What if money didn't exist, and all we had was talent?
+        span.line
+
 
 section.description
   .container
@@ -28,7 +32,7 @@ section.description
         p
           | The Merit Shop went viral with thousands of visits and hundreds of submissions from five continents. For a $300 investment,
           br
-          | we sparked a global debate about the true nature of money and value
+          | we sparked a global debate about the true nature of money and value.
 
 section.results
   .container
