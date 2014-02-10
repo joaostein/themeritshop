@@ -46,13 +46,6 @@
     background: $green
     text-align: center
 
-  .line
-    display: block
-    width: 30px
-    height: 0px
-    border-top: 4px solid #fff
-    margin: 20px auto
-
 //-----------------------------------------------------------------------
 //
 //  Award » Video
@@ -80,21 +73,14 @@
     overflow: hidden
     .video-call-to-action
       position: absolute
+      z-index: 3
       top: 50%
       left: 50%
-      width: 360px
-      margin-left: -180px
-      margin-top: -116px
-      text-align: center
-      z-index: 10
+      width: 85px
+      margin-left: -42px
+      margin-top: -42px
     h1
-      +adjust-font-size-to(20px)
-      line-height: 1.2em
-      letter-spacing: 1px
-      color: #fff
-      text-transform: uppercase
-      margin-top: 55px
-      margin-bottom: 0
+      display: none
 
   .video-wrapper
     padding: 0
@@ -122,6 +108,41 @@
     margin: 0 auto
     &:hover
       background: rgba(255, 255, 255, .9)
+
+  .line
+    display: none
+
+@media (min-width: 481px)
+  .award-page
+    .video-content-wrapper
+      .video-call-to-action
+        width: 360px
+        margin-left: -180px
+        margin-top: -96px
+        text-align: center
+      h1
+        display: block
+        +adjust-font-size-to(20px)
+        line-height: 1.2em
+        letter-spacing: 1px
+        color: #fff
+        text-transform: uppercase
+        margin-top: 35px
+        margin-bottom: 0
+      .line
+        display: block
+        width: 30px
+        height: 0px
+        border-top: 4px solid #fff
+        margin: 20px auto
+
+@media (min-width: 768px)
+  .award-page
+    .video-content-wrapper
+      .video-call-to-action
+        margin-top: -116px
+      h1
+        margin-top: 55px
 
 //-----------------------------------------------------------------------
 //
@@ -176,7 +197,6 @@
         padding-left: 0
       &:last-child
         padding-right: 0
-
 
 //-----------------------------------------------------------------------
 //
