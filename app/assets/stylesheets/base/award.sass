@@ -1,14 +1,47 @@
+// mixins
+
+@mixin logo-sprite($companie-name, $top: false, $right: false, $bottom: false, $left: false)
+  +companies-sprite($companie-name)
+  height: companies-sprite-height($companie-name)
+  width: companies-sprite-width($companie-name)
+  background-color: #eaeaea
+  @if $top != false
+    top: #{ $top }px
+  @if $right != false
+    right: #{ $right }px
+  @if $bottom != false
+    bottom: #{ $bottom }px
+  @if $left != false
+    left: #{ $left }px
+
+@mixin highlight-quotes($companie-name, $top: false, $right: false, $bottom: false, $left: false)
+  h2
+    +companies-sprite(#{ $companie-name }-logo)
+    height: companies-sprite-height(#{ $companie-name }-logo)
+    width: companies-sprite-width(#{ $companie-name }-logo)
+  blockquote
+    +quotes-sprite($companie-name)
+    height: quotes-sprite-height($companie-name)
+    width: quotes-sprite-width($companie-name)
+    @if $top != false
+      top: #{ $top }px
+    @if $right != false
+      right: #{ $right }px
+    @if $bottom != false
+      bottom: #{ $bottom }px
+    @if $left != false
+      left: #{ $left }px
+
 //-----------------------------------------------------------------------
 //
-//  Base » Award
+//  Award » Header
 //
-//  Contains all award page style.
+//  Contains all header style.
 //
 //-----------------------------------------------------------------------
 
 .award-page
   background: #78ebca
-  min-width: 960px
   .main-header
     background: $green
     text-align: center
@@ -20,394 +53,9 @@
     border-top: 4px solid #fff
     margin: 20px auto
 
-  .description
-    background: #eaeaea
-    padding: 80px 0
-
-  .description-block-wrapper
-    +span-columns(16)
-
-  .description-block
-    float: left
-    width: 33.33333333%
-    border-left: 3px solid $green
-    padding-left: 50px
-    padding-right: 30px
-    min-height: 110px
-    &:first-child
-      border-left: 0
-      padding-left: 0
-    &:last-child
-      padding-right: 0
-    h2
-      +adjust-font-size-to(22px)
-      color: $green
-      text-transform: uppercase
-      line-height: 1em
-      margin-top: 0
-    p
-      +adjust-font-size-to(12px)
-      line-height: 1.2em
-
-  .results
-    background: #78ebca
-
-
-.impact-tree
-  background: #a1f1da url("/assets/award/result-tree.png") top center no-repeat
-  position: relative
-  width: 724px
-  height: 940px
-  margin: 0 auto
-  h1
-    +adjust-font-size-to(22px)
-    position: absolute
-    top: 110px
-    left: 222px
-    width: 250px
-    margin: 0
-    line-height: 1.14em
-    text-transform: uppercase
-    letter-spacing: 0.4px
-    text-align: center
-  h2
-    +border-radius(100%)
-    text-indent: -9999em
-    position: absolute
-    margin: 0
-
-  .fast-company
-    +companies-sprite("fast-company")
-    height: companies-sprite-height("fast-company")
-    width: companies-sprite-width("fast-company")
-    background-color: #eaeaea
-    top: 174px
-    left: -23px
-
-  .good
-    +companies-sprite("good")
-    height: companies-sprite-height("good")
-    width: companies-sprite-width("good")
-    background-color: #eaeaea
-    top: 317px
-    left: 104px
-
-  .aol
-    +companies-sprite("aol")
-    height: companies-sprite-height("aol")
-    width: companies-sprite-width("aol")
-    background-color: #eaeaea
-    top: 258px
-    left: 190px
-
-  .ard
-    +companies-sprite("ard")
-    height: companies-sprite-height("ard")
-    width: companies-sprite-width("ard")
-    background-color: #eaeaea
-    top: 316px
-    left: 351px
-
-  .yahoo
-    +companies-sprite("yahoo")
-    height: companies-sprite-height("yahoo")
-    width: companies-sprite-width("yahoo")
-    background-color: #eaeaea
-    top: 215px
-    right: 68px
-
-  .taxi
-    +companies-sprite("taxi")
-    height: companies-sprite-height("taxi")
-    width: companies-sprite-width("taxi")
-    background-color: #eaeaea
-    top: 360px
-    left: -26px
-
-  .abc
-    +companies-sprite("abc")
-    height: companies-sprite-height("abc")
-    width: companies-sprite-width("abc")
-    background-color: #eaeaea
-    top: 416px
-    left: 51px
-
-  .redbox
-    +companies-sprite("red-box")
-    height: companies-sprite-height("red-box")
-    width: companies-sprite-width("red-box")
-    background-color: #eaeaea
-    top: 455px
-    left: 154px
-
-  .psfk
-    +companies-sprite("psfk")
-    height: companies-sprite-height("psfk")
-    width: companies-sprite-width("psfk")
-    background-color: #eaeaea
-    top: 420px
-    left: 299px
-
-  .digiday
-    +companies-sprite("digiday")
-    height: companies-sprite-height("digiday")
-    width: companies-sprite-width("digiday")
-    background-color: #eaeaea
-    top: 405px
-    right: 249px
-
-  .fubiz
-    +companies-sprite("fubiz")
-    height: companies-sprite-height("fubiz")
-    width: companies-sprite-width("fubiz")
-    background-color: #eaeaea
-    top: 409px
-    right: 123px
-
-  .emitionalmojo
-    +companies-sprite("emotional-mojo")
-    height: companies-sprite-height("emotional-mojo")
-    width: companies-sprite-width("emotional-mojo")
-    background-color: #eaeaea
-    top: 339px
-    right: -19px
-
-  .canvas8
-    +companies-sprite("canvas8")
-    height: companies-sprite-height("canvas8")
-    width: companies-sprite-width("canvas8")
-    background-color: #eaeaea
-    top: 524px
-    left: -25px
-
-  .takeapart
-    +companies-sprite("takepart")
-    height: companies-sprite-height("takepart")
-    width: companies-sprite-width("takepart")
-    background-color: #eaeaea
-    top: 538px
-    left: 87px
-
-  .trendhunter
-    +companies-sprite("trend-hunter")
-    height: companies-sprite-height("trend-hunter")
-    width: companies-sprite-width("trend-hunter")
-    background-color: #eaeaea
-    top: 526px
-    left: 188px
-
-  .mashable
-    +companies-sprite("mashable")
-    height: companies-sprite-height("mashable")
-    width: companies-sprite-width("mashable")
-    background-color: #eaeaea
-    top: 569px
-    left: 297px
-
-  .nasdaq
-    +companies-sprite("nasdaq")
-    height: companies-sprite-height("nasdaq")
-    width: companies-sprite-width("nasdaq")
-    background-color: #eaeaea
-    top: 500px
-    right: 241px
-
-  .nationswell
-    +companies-sprite("nation-swell")
-    height: companies-sprite-height("nation-swell")
-    width: companies-sprite-width("nation-swell")
-    background-color: #eaeaea
-    top: 552px
-    right: 160px
-
-  .bluebus
-    +companies-sprite("blue-bus")
-    height: companies-sprite-height("blue-bus")
-    width: companies-sprite-width("blue-bus")
-    background-color: #eaeaea
-    top: 497px
-    right: 14px
-
-  .minutos
-    +companies-sprite("minutos")
-    height: companies-sprite-height("minutos")
-    width: companies-sprite-width("minutos")
-    background-color: #eaeaea
-    top: 656px
-    left: 111px
-
-  .influencia
-    +companies-sprite("influencia")
-    height: companies-sprite-height("influencia")
-    width: companies-sprite-width("influencia")
-    background-color: #eaeaea
-    top: 671px
-    left: 183px
-
-  .swr
-    +companies-sprite("swr")
-    height: companies-sprite-height("swr")
-    width: companies-sprite-width("swr")
-    background-color: #eaeaea
-    top: 694px
-    left: 362px
-
-  .hotdigital
-    +companies-sprite("hot-digital")
-    height: companies-sprite-height("hot-digital")
-    width: companies-sprite-width("hot-digital")
-    background-color: #eaeaea
-    top: 656px
-    right: 44px
-
-  .kenh
-    +companies-sprite("kenh")
-    height: companies-sprite-height("kenh")
-    width: companies-sprite-width("kenh")
-    background-color: #eaeaea
-    top: 836px
-    left: 190px
-
-  .irorio
-    +companies-sprite("irorio")
-    height: companies-sprite-height("irorio")
-    width: companies-sprite-width("irorio")
-    background-color: #eaeaea
-    top: 795px
-    right: 174px
-
-.notable-results
-  +pie-clearfix()
-  background: #a1f1da
-  width: 724px
-  margin: 0 auto
-  padding: 70px 0 90px
-  .col
-    float: left
-    width: 25%
-    height: 100%
-    padding: 25px 25px 0
-    h2
-      text-indent: -9999em
-      margin: 0
-  .quote
-    position: relative
-  blockquote
-    position: absolute
-    margin: 0
-    top: -80px
-    text-indent: -9999em
-
-.abc-news-logo
-  margin-top: 30px
-  h2
-    +companies-sprite("abc-logo")
-    height: companies-sprite-height("abc-logo")
-    width: companies-sprite-width("abc-logo")
-  blockquote
-    +quotes-sprite("abc")
-    height: quotes-sprite-height("abc")
-    width: quotes-sprite-width("abc")
-    top: -57px
-    left: -223px
-
-.fast-company-logo
-  margin-top: 239px
-  h2
-    +companies-sprite("fast-company-logo")
-    height: companies-sprite-height("fast-company-logo")
-    width: companies-sprite-width("fast-company-logo")
-  blockquote
-    +quotes-sprite("fast-company")
-    height: quotes-sprite-height("fast-company")
-    width: quotes-sprite-width("fast-company")
-    top: -70px
-    left: -219px
-
-.mashable-logo
-  margin-top: 186px
-  margin-left: 20px
-  h2
-    +companies-sprite("mashable-logo")
-    height: companies-sprite-height("mashable-logo")
-    width: companies-sprite-width("mashable-logo")
-  blockquote
-    +quotes-sprite("mashable")
-    height: quotes-sprite-height("mashable")
-    width: quotes-sprite-width("mashable")
-    right: -202px
-
-.nasdaq-logo
-  margin-top: 245px
-  margin-left: 7px
-  h2
-    +companies-sprite("nasdaq-logo")
-    height: companies-sprite-height("nasdaq-logo")
-    width: companies-sprite-width("nasdaq-logo")
-  blockquote
-    +quotes-sprite("nasdaq")
-    height: quotes-sprite-height("nasdaq")
-    width: quotes-sprite-width("nasdaq")
-    right: -214px
-    top: -87px
-
-.video-examples
-  float: left
-  width: 50%
-  text-align: center
-  h2
-    +adjust-font-size-to(16px)
-    color: darken(#91edd2, 10%)
-    text-transform: uppercase
-    margin: 0 0 5px
-  a
-    margin-bottom: 10px
-    +inline-block
-
-.bottom
-  width: 100%
-  background: #78ebca
-  padding-top: 4px
-  .ipad
-    position: absolute
-    left: -150px
-    top: -415px
-    img
-      width: 100%
-
-  .ipad-block
-    height: 595px
-    width: 100%
-    position: relative
-  .container.visit
-    position: relative
-    height: 250px
-  .money
-    display: block
-    margin: 0 auto
-
-.bottom-wrapper
-  background: #a1f1da
-  width: 724px
-  margin: 0 auto
-  padding-top: 105px
-  padding-bottom: 560px
-
-.visit-website
-  position: absolute
-  display: block
-  width: 490px
-  height: 250px
-  bottom: -90px
-  right: 290px
-  z-index: 2
-  background: url("/assets/award/visit-website.png") no-repeat
-  &:hover
-    background: url("/assets/award/visit-website-hover.png") no-repeat
-
 //-----------------------------------------------------------------------
 //
-//  Base » Award
+//  Award » Video
 //
 //  Contains all Video style.
 //
@@ -475,8 +123,248 @@
     &:hover
       background: rgba(255, 255, 255, .9)
 
+// @media (min-width: 768px)
+//   .award-page
+//     .video-intro
+//       .cover
+//         border: 5px solid blue
+//         width: 100%
+//         height: auto
 
+//-----------------------------------------------------------------------
+//
+//  Award » Description
+//
+//  Contains all description (insightm, idea and impact) section
+//
+//-----------------------------------------------------------------------
 
+.award-page
+  .description
+    background: #eaeaea
+    padding: 80px 0
+
+  .description-block-wrapper
+    +span-columns(16)
+
+  .description-block
+    float: left
+    width: 33.33333333%
+    border-left: 3px solid $green
+    padding-left: 50px
+    padding-right: 30px
+    min-height: 110px
+    &:first-child
+      border-left: 0
+      padding-left: 0
+    &:last-child
+      padding-right: 0
+    h2
+      +adjust-font-size-to(22px)
+      color: $green
+      text-transform: uppercase
+      line-height: 1em
+      margin-top: 0
+    p
+      +adjust-font-size-to(12px)
+      line-height: 1.2em
+
+//-----------------------------------------------------------------------
+//
+//  Award » Impact tree
+//
+//  Contains all impact-tree section style.
+//
+//-----------------------------------------------------------------------
+
+.award-page
+  .results
+    background: #78ebca
+
+.impact-tree
+  background: #a1f1da url("/assets/award/result-tree.png") top center no-repeat
+  position: relative
+  width: 77%
+  height: 940px
+  margin: 0 auto
+  h1
+    +adjust-font-size-to(22px)
+    position: absolute
+    top: 110px
+    left: 222px
+    width: 250px
+    margin: 0
+    line-height: 1.14em
+    text-transform: uppercase
+    letter-spacing: 0.4px
+    text-align: center
+  h2
+    +border-radius(100%)
+    text-indent: -9999em
+    position: absolute
+    margin: 0
+
+.impact-tree
+  .fast-company
+    +logo-sprite("fast-company", $top: 173, $left: -23)
+  .good
+    +logo-sprite("good", $top: 317, $left: 104)
+  .aol
+    +logo-sprite("aol", $top: 258, $left: 190)
+  .ard
+    +logo-sprite("ard", $top: 316, $left: 351)
+  .yahoo
+    +logo-sprite("yahoo", $top: 215, $right: 68)
+  .taxi
+    +logo-sprite("taxi", $top: 360, $left: -26)
+  .abc
+    +logo-sprite("abc", $top: 416, $left: 51)
+  .redbox
+    +logo-sprite("red-box", $top: 455, $left: 154)
+  .psfk
+    +logo-sprite("psfk", $top: 420, $left: 299)
+  .digiday
+    +logo-sprite("digiday", $top: 405, $right: 249)
+  .fubiz
+    +logo-sprite("fubiz", $top: 409, $right: 123)
+  .emitionalmojo
+    +logo-sprite("emotional-mojo", $top: 339, $right: -19)
+  .canvas8
+    +logo-sprite("canvas8", $top: 524, $left: -25)
+  .takeapart
+    +logo-sprite("takepart", $top: 538, $left: 87)
+  .trendhunter
+    +logo-sprite("trend-hunter", $top: 526, $left: 188)
+  .mashable
+    +logo-sprite("mashable", $top: 569, $left: 297)
+  .nasdaq
+    +logo-sprite("nasdaq", $top: 500, $right: 241)
+  .nationswell
+    +logo-sprite("nation-swell", $top: 552, $right: 160)
+  .bluebus
+    +logo-sprite("blue-bus", $top: 497, $right: 14)
+  .minutos
+    +logo-sprite("minutos", $top: 656, $left: 111)
+  .influencia
+    +logo-sprite("influencia", $top: 671, $left: 183)
+  .swr
+    +logo-sprite("swr", $top: 694, $left: 362)
+  .hotdigital
+    +logo-sprite("hot-digital", $top: 656, $right: 44)
+  .kenh
+    +logo-sprite("kenh", $top: 836, $left: 190)
+  .irorio
+    +logo-sprite("irorio", $top: 795, $right: 174)
+
+//-----------------------------------------------------------------------
+//
+//  Award » Highlight quotes
+//
+//  Contains all highlighted quotes section
+//
+//-----------------------------------------------------------------------
+
+.notable-results
+  +pie-clearfix()
+  background: #a1f1da
+  width: 77%
+  margin: 0 auto
+  padding: 70px 0 90px
+  .col
+    float: left
+    width: 25%
+    height: 100%
+    padding: 25px 25px 0
+    h2
+      text-indent: -9999em
+      margin: 0
+  .quote
+    position: relative
+  blockquote
+    position: absolute
+    margin: 0
+    top: -80px
+    text-indent: -9999em
+
+.abc-news-logo
+  +highlight-quotes("abc", $top: -57, $left: -223)
+  margin-top: 30px
+
+.fast-company-logo
+  +highlight-quotes("fast-company", $top: -70, $left: -219)
+  margin-top: 239px
+
+.mashable-logo
+  +highlight-quotes("mashable", $right: -202)
+  margin-top: 186px
+  margin-left: 20px
+
+.nasdaq-logo
+  +highlight-quotes("nasdaq", $top: -87, $right: -214)
+  margin-top: 245px
+  margin-left: 7px
+
+.video-examples
+  float: left
+  width: 50%
+  text-align: center
+  h2
+    +adjust-font-size-to(16px)
+    color: darken(#91edd2, 10%)
+    text-transform: uppercase
+    margin: 0 0 5px
+  a
+    margin-bottom: 10px
+    +inline-block
+
+//-----------------------------------------------------------------------
+//
+//  Award » Bottom
+//
+//  Contains all bottom section style.
+//
+//-----------------------------------------------------------------------
+
+.bottom
+  width: 100%
+  background: #78ebca
+  padding-top: 4px
+  .ipad
+    position: absolute
+    left: -150px
+    top: -415px
+    img
+      width: 100%
+
+  .ipad-block
+    height: 595px
+    width: 100%
+    position: relative
+  .container.visit
+    position: relative
+    height: 250px
+  .money
+    display: block
+    margin: 0 auto
+
+.bottom-wrapper
+  background: #a1f1da
+  width: 77%
+  margin: 0 auto
+  padding-top: 105px
+  padding-bottom: 560px
+
+.visit-website
+  position: absolute
+  display: block
+  width: 490px
+  height: 250px
+  bottom: -90px
+  right: 290px
+  z-index: 2
+  background: url("/assets/award/visit-website.png") no-repeat
+  &:hover
+    background: url("/assets/award/visit-website-hover.png") no-repeat
 
 
 
