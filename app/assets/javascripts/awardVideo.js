@@ -14,12 +14,15 @@ $(function (){
   var toggleCover = function (e) {
     videoCalltoAction.fadeToggle();
     $('.cover').fadeToggle();
-    video.play();
     e.preventDefault();
   };
 
   video.ready(function(){
-    $(playBtn).on('click', toggleCover);
+    $(playBtn).on('click', function (e) {
+      toggleCover(e);
+      video.play();
+    });
+
     this.on('ended', toggleCover);
   });
 
