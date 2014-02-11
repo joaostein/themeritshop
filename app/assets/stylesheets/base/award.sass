@@ -407,7 +407,6 @@
     +companies-sprite("abc-logo")
     height: companies-sprite-height("abc-logo")
     width: companies-sprite-width("abc-logo")
-  // margin-top: 30px
 
 .fast-company-logo
   +highlight-quotes("fast-company-mobile", $top: -70, $left: -219)
@@ -415,7 +414,6 @@
     +companies-sprite("fast-company-logo")
     height: companies-sprite-height("fast-company-logo")
     width: companies-sprite-width("fast-company-logo")
-  // margin-top: 239px
 
 .mashable-logo
   +highlight-quotes("mashable-mobile", $right: -202)
@@ -423,8 +421,6 @@
     +companies-sprite("mashable-logo")
     height: companies-sprite-height("mashable-logo")
     width: companies-sprite-width("mashable-logo")
-  // margin-top: 186px
-  // margin-left: 20px
 
 .nasdaq-logo
   +highlight-quotes("nasdaq-mobile", $top: -87, $right: -214)
@@ -432,8 +428,6 @@
     +companies-sprite("nasdaq-logo")
     height: companies-sprite-height("nasdaq-logo")
     width: companies-sprite-width("nasdaq-logo")
-  // margin-top: 245px
-  // margin-left: 7px
 
 .video-examples
   text-align: center
@@ -446,7 +440,6 @@
   a
     display: block
     margin-bottom: 10px
-    // +inline-block
   img
     width: 100%
 
@@ -509,17 +502,24 @@
 
 @media (min-width: 1140px)
   .notable-results
+    .col
+      padding-top: 25px
   .video-examples
     padding: 0 6%
   .abc-news-logo
     left: 0
+    margin-top: 30px
   .fast-company-logo
     left: 0
+    margin-top: 239px
   .mashable-logo
     right: 0
+    margin-top: 186px
+    margin-left: 20px
   .nasdaq-logo
     right: 0
-
+    margin-top: 245px
+    margin-left: 7px
 
 
 //-----------------------------------------------------------------------
