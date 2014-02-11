@@ -15,10 +15,6 @@
     left: #{ $left }px
 
 @mixin highlight-quotes($companie-name, $top: false, $right: false, $bottom: false, $left: false)
-  h2
-    +companies-sprite(#{ $companie-name }-logo)
-    height: companies-sprite-height(#{ $companie-name }-logo)
-    width: companies-sprite-width(#{ $companie-name }-logo)
   blockquote
     +quotes-sprite($companie-name)
     height: quotes-sprite-height($companie-name)
@@ -357,7 +353,7 @@
     position: relative
     background: #a1f1da url("/assets/award/result-tree.png") top center no-repeat
     max-width: 726px
-    height: 940px
+    height: 1010px
     margin: 0 auto
     h1
       position: absolute
@@ -391,56 +387,140 @@
 
 .notable-results
   +pie-clearfix()
+  width: 100%
+  padding: 80px 10% 20px
   background: #a1f1da
-  max-width: 726px
-  margin: 0 auto
-  padding: 70px 0 90px
   .col
-    float: left
-    width: 25%
-    height: 100%
-    padding: 25px 25px 0
     h2
       text-indent: -9999em
-      margin: 0
+      margin: 0 auto
   .quote
-    position: relative
+    position: static
+    margin-bottom: 60px
   blockquote
-    position: absolute
-    margin: 0
-    top: -80px
+    margin: 0 auto 30px
     text-indent: -9999em
 
 .abc-news-logo
-  +highlight-quotes("abc", $top: -57, $left: -223)
-  margin-top: 30px
+  +highlight-quotes("abc-mobile", $top: -57, $left: -223)
+  h2
+    +companies-sprite("abc-logo")
+    height: companies-sprite-height("abc-logo")
+    width: companies-sprite-width("abc-logo")
+  // margin-top: 30px
 
 .fast-company-logo
-  +highlight-quotes("fast-company", $top: -70, $left: -219)
-  margin-top: 239px
+  +highlight-quotes("fast-company-mobile", $top: -70, $left: -219)
+  h2
+    +companies-sprite("fast-company-logo")
+    height: companies-sprite-height("fast-company-logo")
+    width: companies-sprite-width("fast-company-logo")
+  // margin-top: 239px
 
 .mashable-logo
-  +highlight-quotes("mashable", $right: -202)
-  margin-top: 186px
-  margin-left: 20px
+  +highlight-quotes("mashable-mobile", $right: -202)
+  h2
+    +companies-sprite("mashable-logo")
+    height: companies-sprite-height("mashable-logo")
+    width: companies-sprite-width("mashable-logo")
+  // margin-top: 186px
+  // margin-left: 20px
 
 .nasdaq-logo
-  +highlight-quotes("nasdaq", $top: -87, $right: -214)
-  margin-top: 245px
-  margin-left: 7px
+  +highlight-quotes("nasdaq-mobile", $top: -87, $right: -214)
+  h2
+    +companies-sprite("nasdaq-logo")
+    height: companies-sprite-height("nasdaq-logo")
+    width: companies-sprite-width("nasdaq-logo")
+  // margin-top: 245px
+  // margin-left: 7px
 
 .video-examples
-  float: left
-  width: 50%
   text-align: center
+  margin-bottom: 50px
   h2
     +adjust-font-size-to(16px)
     color: darken(#91edd2, 10%)
     text-transform: uppercase
     margin: 0 0 5px
   a
+    display: block
     margin-bottom: 10px
-    +inline-block
+    // +inline-block
+  img
+    width: 100%
+
+@media (min-width: 768px)
+  .notable-results
+    max-width: 726px
+    margin: 0 auto
+    .col
+      +pie-clearfix
+      width: 100%
+    .quote
+      float: left
+      &:first-child
+        float: left
+      &:last-child
+        float: right
+  .video-examples
+    width: 50%
+    margin: 0 auto
+    margin-bottom: 70px
+
+@media (min-width: 1024px)
+  .notable-results
+    padding: 70px 0 90px
+    .col
+      float: left
+      width: 25%
+      height: 100%
+      padding: 70px 25px 0
+      h2
+        margin: 0
+    .quote
+      position: relative
+      float: none !important
+      width: 100%
+      margin-bottom: 230px
+      &:last-child
+        margin-bottom: 0
+
+  .video-examples
+    float: left
+    width: 50%
+    padding: 0 10%
+    margin-bottom: 0
+  blockquote
+    position: absolute
+    top: -80px
+  .abc-news-logo
+    +highlight-quotes("abc", $top: -57, $left: -223)
+    left: 60px
+  .fast-company-logo
+    +highlight-quotes("fast-company", $top: -70, $left: -219)
+    left: 60px
+  .mashable-logo
+    +highlight-quotes("mashable", $right: -202)
+    right: 40px
+  .nasdaq-logo
+    +highlight-quotes("nasdaq", $top: -87, $right: -214)
+    right: 45px
+
+@media (min-width: 1140px)
+  .notable-results
+  .video-examples
+    padding: 0 6%
+  .abc-news-logo
+    left: 0
+  .fast-company-logo
+    left: 0
+  .mashable-logo
+    right: 0
+  .nasdaq-logo
+    right: 0
+
+
 
 //-----------------------------------------------------------------------
 //
