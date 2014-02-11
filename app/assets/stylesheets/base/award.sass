@@ -54,13 +54,16 @@
   .video-intro
     width: 100%
     .cover
-      height: 100%
+      width: 100%
       display: block
 
   .video-container
     position: relative
+    max-height: 960px
 
   .video-content-wrapper
+    background: url("/assets/award/video-placeholder-image.jpg") top center no-repeat
+    background-size: cover
     position: absolute
     top: 0
     bottom: 0
@@ -84,6 +87,7 @@
   video
     display: block
     width: 100%
+    max-height: 960px
 
   .video-js
     .vjs-tech
@@ -108,7 +112,13 @@
   .line
     display: none
 
-@media (min-width: 481px)
+@media (min-width: 568px)
+  .award-page
+    .video-container
+      min-height: 250px
+
+
+@media (min-width: 569px)
   .award-page
     .video-content-wrapper
       .video-call-to-action
@@ -536,50 +546,66 @@
   padding-top: 4px
   .ipad
     position: absolute
-    left: -150px
-    top: -415px
+    left: -250px
+    overflow: hidden
+    top: -265px
+    padding-bottom: 150px
     img
-      width: 100%
-
+      width: 130%
   .ipad-block
-    height: 595px
     width: 100%
     position: relative
   .container.visit
     position: relative
-    height: 250px
   .money
     display: block
     margin: 0 auto
 
 .bottom-wrapper
   background: #a1f1da
-  width: 77%
   margin: 0 auto
   padding-top: 105px
-  padding-bottom: 560px
+  padding-bottom: 370px
+  width: 100%
 
 .visit-website
   position: absolute
   display: block
-  width: 490px
-  height: 250px
-  bottom: -90px
-  right: 290px
+  width: 55%
+  height: 210px
+  bottom: 70px
+  right: 0
   z-index: 2
-  background: url("/assets/award/visit-website.png") no-repeat
+  background: url("/assets/award/visit-website.png") center right no-repeat
+  background-size: contain
   &:hover
-    background: url("/assets/award/visit-website-hover.png") no-repeat
+    background: url("/assets/award/visit-website-hover.png") center right no-repeat
+    background-size: contain
 
+@media (min-width: 768px)
+  .bottom
+    .ipad
+      left: -150px
+      top: -355px
+  .bottom-wrapper
+    max-width: 726px
+    margin: 0 auto
+    padding-bottom: 500px
 
+@media (min-width: 1024px)
+  .bottom
+    .ipad
+      img
+        width: 100%
+    .ipad-block
+      height: 595px
+  .visit-website
+    width: 490px
+    height: 250px
+    bottom: 60px
+    right: 230px
+    background-size: auto
 
-
-
-
-
-
-
-
-
-
-
+@media (min-width: 1140px)
+  .visit-website
+    right: 300px
