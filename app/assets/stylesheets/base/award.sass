@@ -182,6 +182,7 @@
     p
       +adjust-font-size-to(12px)
       line-height: 1.2em
+      margin-bottom: 0
 
 @media (min-width: 768px)
   .award-page
@@ -191,14 +192,20 @@
       border-left: 3px solid $green
       padding-left: 50px
       padding-right: 30px
-      min-height: 110px
+      min-height: 156px
       margin-top: 0
       h2
         text-align: left
 
+@media (min-width: 898px)
+  .award-page
+    .description-block
+      min-height: 136px
+
 @media (min-width: 1024px)
   .award-page
     .description-block
+      min-height: 122px
       &:first-child
         padding-left: 0
       &:last-child
